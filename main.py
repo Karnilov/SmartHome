@@ -1,5 +1,4 @@
 import classes
-import pygame
 
 updater=classes.update()
 
