@@ -10,6 +10,7 @@ class update():
         self.resourceDir=self.getUrl('https://github.com/Karnilov/SmartHome')
 
     def getUrl(self, link):
+
         lk = link.split('/')
         for q in range(3):
             del lk[0]
@@ -17,8 +18,6 @@ class update():
         del lk[0]
         repo = lk[0]
         del lk[0]
-        for q in range(2):
-            del lk[0]
         path = '/'.join(lk)
         url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
         return url
